@@ -36,5 +36,5 @@ Ensure you have **Python 3.10+** and **FFmpeg** installed and added to your syst
 
 ### 2. Clone the Repository
 ```bash
-git clone [https://github.com/YOUR_USERNAME/AIContentCreatorSSE.git](https://github.com/YOUR_USERNAME/AIContentCreatorSSE.git)
+git clone [https://github.com/your_user/AIContentCreatorSSE.git](https://github.com/your_user/AIContentCreatorSSE.git)
 cd AIContentCreatorSSE
