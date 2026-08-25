@@ -1,3 +1,7 @@
 .env
 .venv/
 __pycache__/
+client_secrets.json
+token.pickle
+token.json
+generated/
