@@ -25,10 +25,8 @@ jobs:
       - name: Install Python Requirements
         run: pip install -r requirements.txt
 
-      - name: Inject Secrets into Runner Environment
+      - name: Inject Secret Files into Runner
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
           TOKEN_PICKLE: ${{ secrets.TOKEN_PICKLE_BASE64 }}
         run: |
@@ -38,5 +36,6 @@ jobs:
       - name: Execute Content Creator Pipeline
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
         run: python main.py
