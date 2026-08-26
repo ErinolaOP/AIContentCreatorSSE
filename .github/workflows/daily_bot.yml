@@ -2,8 +2,8 @@ name: Daily Shorts Automation Bot
 
 on:
   schedule:
-    - cron: '0 12 * * *' # Runs every day at 12:00 PM UTC
-  workflow_dispatch: # Allows manual triggering from GitHub
+    - cron: '0 12 * * *'
+  workflow_dispatch:
 
 jobs:
   run-bot:
@@ -32,7 +32,6 @@ jobs:
           CLIENT_SECRETS: ${{ secrets.CLIENT_SECRETS_JSON }}
           TOKEN_PICKLE: ${{ secrets.TOKEN_PICKLE_BASE64 }}
         run: |
-          # Reconstruct secret files on the runner machine temporarily
           echo "$CLIENT_SECRETS" > client_secrets.json
           echo "$TOKEN_PICKLE" | base64 -d > token.pickle
 
